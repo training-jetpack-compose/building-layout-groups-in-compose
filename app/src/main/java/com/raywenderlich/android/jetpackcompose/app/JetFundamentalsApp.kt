@@ -35,6 +35,7 @@
 package com.raywenderlich.android.jetpackcompose.app
 
 import androidx.compose.animation.Crossfade
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -42,6 +43,7 @@ import com.raywenderlich.android.jetpackcompose.router.JetFundamentalsRouter
 import com.raywenderlich.android.jetpackcompose.router.Screen
 import com.raywenderlich.android.jetpackcompose.screens.*
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun JetFundamentalsApp() {
   Surface(color = MaterialTheme.colors.background) {
