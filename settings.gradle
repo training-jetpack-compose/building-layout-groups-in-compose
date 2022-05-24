@@ -1,2 +1,2 @@
-rootProject.name='JetpackCompose'
+rootProject.name='building-layout-groups-in-compose'
 include ':app'
