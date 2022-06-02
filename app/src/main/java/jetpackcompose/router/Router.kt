@@ -21,7 +21,7 @@ sealed class Screen {
   object Grid : Screen()
 }
 
-object JetFundamentalsRouter {
+object Router {
   var currentScreen: MutableState<Screen> = mutableStateOf(Screen.Navigation)
 
   fun navigateTo(destination: Screen) {

@@ -17,7 +17,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import jetpackcompose.R
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
@@ -57,7 +57,7 @@ fun NavigationButton(text: String, screen: Screen) {
       .padding(start = 16.dp, end = 16.dp, top = 16.dp),
     shape = RoundedCornerShape(4.dp),
     colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.colorPrimary)),
-    onClick = { JetFundamentalsRouter.navigateTo(screen) }
+    onClick = { Router.navigateTo(screen) }
   ) {
     Text(
       text = text,

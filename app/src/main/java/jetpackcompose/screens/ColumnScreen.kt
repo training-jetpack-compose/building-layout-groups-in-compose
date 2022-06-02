@@ -10,20 +10,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
 fun ColumnScreen() {
-  MyColumn()
+  DemoColumn()
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MyColumn() {
+fun DemoColumn() {
   Column(
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.SpaceEvenly,

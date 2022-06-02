@@ -18,7 +18,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
@@ -29,18 +29,18 @@ fun ExploreButtonsScreen() {
     verticalArrangement = Arrangement.Center
   ) {
 
-    MyButton()
-    MyRadioGroup()
-    MyFloatingActionButton()
+    DemoButton()
+    DemoRadioGroup()
+    DemoFloatingActionButton()
 
     BackButtonHandler {
-      JetFundamentalsRouter.navigateTo(Screen.Navigation)
+      Router.navigateTo(Screen.Navigation)
     }
   }
 }
 
 @Composable
-fun MyButton() {
+fun DemoButton() {
   Button(
     onClick = {},
     colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.colorPrimary)),
@@ -57,7 +57,7 @@ fun MyButton() {
 }
 
 @Composable
-fun MyRadioGroup() {
+fun DemoRadioGroup() {
   val radioButtons = listOf(0, 1, 2)
 
   val selectedButton = remember { mutableStateOf(radioButtons.first()) }
@@ -81,7 +81,7 @@ fun MyRadioGroup() {
 }
 
 @Composable
-fun MyFloatingActionButton() {
+fun DemoFloatingActionButton() {
   FloatingActionButton(
     onClick = {},
     backgroundColor = colorResource(id = R.color.colorPrimary),

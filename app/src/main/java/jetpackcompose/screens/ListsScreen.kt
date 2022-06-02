@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 private val items = listOf(
@@ -44,15 +44,15 @@ private val items = listOf(
 
 @Composable
 fun ListScreen() {
-  MyList()
+  DemoList()
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MyList() {
+fun DemoList() {
   //TODO add your code here
 }
 

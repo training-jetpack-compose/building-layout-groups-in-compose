@@ -10,20 +10,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
 fun BoxScreen() {
-  MyBox()
+  DemoBox()
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MyBox(
+fun DemoBox(
   modifier: Modifier = Modifier,
   contentModifier: Modifier = Modifier
 ) {

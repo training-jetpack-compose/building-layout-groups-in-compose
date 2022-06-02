@@ -11,22 +11,22 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 val THREE_ELEMENT_LIST = listOf(R.string.first, R.string.second, R.string.third)
 
 @Composable
 fun RowScreen() {
-  MyRow()
+  DemoRow()
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MyRow() {
+fun DemoRow() {
   Row(
     verticalAlignment = Alignment.CenterVertically,
     horizontalArrangement = Arrangement.SpaceEvenly,

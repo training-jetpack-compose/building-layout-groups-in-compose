@@ -7,7 +7,7 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 private val items = listOf(
@@ -28,7 +28,7 @@ fun GridScreen() {
   GridView(columnCount = 3)
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 

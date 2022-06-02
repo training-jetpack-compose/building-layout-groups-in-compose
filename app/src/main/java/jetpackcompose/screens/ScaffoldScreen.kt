@@ -1,4 +1,3 @@
-
 package jetpackcompose.screens
 
 import androidx.compose.material.*
@@ -11,37 +10,37 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
 fun ScaffoldScreen() {
-  MyScaffold()
+  DemoScaffold()
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MyScaffold() {
+fun DemoScaffold() {
   val scaffoldState: ScaffoldState = rememberScaffoldState()
   val scope: CoroutineScope = rememberCoroutineScope()
 
   Scaffold(
     scaffoldState = scaffoldState,
     contentColor = colorResource(id = R.color.colorPrimary),
-    content = { MyRow() },
-    topBar = { MyTopAppBar(scaffoldState = scaffoldState, scope = scope) },
-    bottomBar = { MyBottomAppBar() },
-    drawerContent = { MyColumn() }
+    content = { DemoRow() },
+    topBar = { DemoTopAppBar(scaffoldState = scaffoldState, scope = scope) },
+    bottomBar = { DemoBottomAppBar() },
+    drawerContent = { DemoColumn() }
   )
 }
 
 @Composable
-fun MyTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
+fun DemoTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
 
   val drawerState = scaffoldState.drawerState
 
@@ -66,7 +65,7 @@ fun MyTopAppBar(scaffoldState: ScaffoldState, scope: CoroutineScope) {
 }
 
 @Composable
-fun MyBottomAppBar() {
+fun DemoBottomAppBar() {
   BottomAppBar(
     content = {},
     backgroundColor = colorResource(id = R.color.colorPrimary)

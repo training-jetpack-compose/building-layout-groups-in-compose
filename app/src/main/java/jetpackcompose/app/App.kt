@@ -4,14 +4,14 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 import jetpackcompose.screens.*
 
 @Composable
-fun JetFundamentalsApp() {
+fun App() {
   Surface(color = MaterialTheme.colors.background) {
-    Crossfade(targetState = JetFundamentalsRouter.currentScreen) { screenState ->
+    Crossfade(targetState = Router.currentScreen) { screenState ->
       when (screenState.value) {
         is Screen.Navigation -> NavigationScreen()
         is Screen.Text -> TextScreen()

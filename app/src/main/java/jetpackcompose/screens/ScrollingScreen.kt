@@ -1,4 +1,3 @@
-
 package jetpackcompose.screens
 
 import androidx.annotation.DrawableRes
@@ -13,29 +12,29 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
 fun ScrollingScreen() {
-  MyScrollingScreen()
+    DemoScrollingScreen()
 
-  BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
-  }
+    BackButtonHandler {
+        Router.navigateTo(Screen.Navigation)
+    }
 }
 
 @Composable
-fun MyScrollingScreen() {
-  //TODO add your code here
+fun DemoScrollingScreen() {
+    //TODO add your code here
 }
 
 @Composable
 fun BookImage(@DrawableRes imageResId: Int, @StringRes contentDescriptionResId: Int) {
-  Image(
-    bitmap = ImageBitmap.imageResource(imageResId),
-    contentDescription = stringResource(contentDescriptionResId),
-    contentScale = ContentScale.FillBounds,
-    modifier = Modifier.size(476.dp, 616.dp)
-  )
+    Image(
+        bitmap = ImageBitmap.imageResource(imageResId),
+        contentDescription = stringResource(contentDescriptionResId),
+        contentScale = ContentScale.FillBounds,
+        modifier = Modifier.size(476.dp, 616.dp)
+    )
 }

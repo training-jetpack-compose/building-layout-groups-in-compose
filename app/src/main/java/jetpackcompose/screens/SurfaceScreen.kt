@@ -14,23 +14,23 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
 fun SurfaceScreen(modifier: Modifier = Modifier) {
 
   Box(modifier = modifier.fillMaxSize()) {
-    MySurface(modifier = modifier.align(Alignment.Center))
+    DemoSurface(modifier = modifier.align(Alignment.Center))
   }
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MySurface(modifier: Modifier) {
+fun DemoSurface(modifier: Modifier) {
   Surface(
     modifier = modifier.size(100.dp),
     color = Color.LightGray,
@@ -38,6 +38,6 @@ fun MySurface(modifier: Modifier) {
     elevation = 1.dp,
     border = BorderStroke(1.dp, Color.Black)
   ) {
-    MyColumn()
+    DemoColumn()
   }
 }

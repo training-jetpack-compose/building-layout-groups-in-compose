@@ -12,28 +12,28 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import jetpackcompose.R
 import jetpackcompose.router.BackButtonHandler
-import jetpackcompose.router.JetFundamentalsRouter
+import jetpackcompose.router.Router
 import jetpackcompose.router.Screen
 
 @Composable
 fun AlertDialogScreen() {
 
-  MyAlertDialog()
+  DemoAlertDialog()
 
   BackButtonHandler {
-    JetFundamentalsRouter.navigateTo(Screen.Navigation)
+    Router.navigateTo(Screen.Navigation)
   }
 }
 
 @Composable
-fun MyAlertDialog() {
+fun DemoAlertDialog() {
   val shouldShowDialog = remember { mutableStateOf(true) }
 
   if (shouldShowDialog.value) {
     AlertDialog(
       onDismissRequest = {
         shouldShowDialog.value = false
-        JetFundamentalsRouter.navigateTo(Screen.Navigation)
+        Router.navigateTo(Screen.Navigation)
       },
       title = { Text(text = stringResource(id = R.string.alert_dialog_title)) },
       text = { Text(text = stringResource(id = R.string.alert_dialog_text)) },
@@ -42,7 +42,7 @@ fun MyAlertDialog() {
           colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.colorPrimary)),
           onClick = {
             shouldShowDialog.value = false
-            JetFundamentalsRouter.navigateTo(Screen.Navigation)
+            Router.navigateTo(Screen.Navigation)
           }) {
           Text(
             text = stringResource(id = R.string.confirm),
